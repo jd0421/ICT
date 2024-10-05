@@ -33,3 +33,9 @@ result = expensive_computataion(x)
 
 
 
+
+import plotly.express as px
+
+data_canada = px.data.gapminder().query("country == 'Canada'")
+fig_1 = px.bar(data_canada, x='year' , y='pop')
+fig_1.show()
