@@ -110,7 +110,7 @@ fig11 = px.box(df_3, y = 'total_bill' , x = 'time' , points = 'all' , color = 's
 st.plotly_chart(fig11)
 
 #12 boxplots_details
-fig2 = px.box(df_3, y = 'total_bill' , x = 'day' , points = 'all' , color = 'smoker')
+fig12 = px.box(df_3, y = 'total_bill' , x = 'day' , points = 'all' , color = 'smoker')
 st.plotly_chart(fig12)
 
 #13 bubble charts
