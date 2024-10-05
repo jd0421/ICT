@@ -40,3 +40,12 @@ data_canada = px.data.gapminder().query("country == 'Canada'")
 data_canada
 fig1 = px.bar(data_canada, x='year' , y='pop')
 st.plotly_chart(fig1)
+
+
+
+df = px.data.gapminder().query("continent == 'Oceania'")
+df
+fig2 = px.bar(df, x = 'year' , y = 'pop' , color = 'country' ,
+             labels = {'pop' : 'population of Canada'} , hover_data = ['lifeExp','gdpPercap']
+             , barmode = 'group')
+st.plotly_chart(fig2)
