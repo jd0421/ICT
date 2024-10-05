@@ -66,3 +66,10 @@ fig4 = go.Figure(data = go.Bar(
     width=[0.8,0.8,0.8, 3.5, 4]
 ))
 st.plotly_chart(fig4)
+
+#5
+data_canada = px.data.gapminder().query("country == 'Canada'")
+data_canada
+fig5 = px.line(data_canada, x = 'year', y = 'lifeExp' ,
+              title = 'Life expectacy in Canada')
+st.plotly_chart(fig5)
