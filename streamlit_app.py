@@ -103,5 +103,24 @@ fig10 = px.imshow([[1,23,49],[123,5,4],[45,6,3]]
 st.plotly_chart(fig10)
 
 
+#11 boxplots
+df_3 = px.data.tips()
+df_3
+fig11 = px.box(df_3, y = 'total_bill' , x = 'time' , points = 'all' , color = 'smoker')
+st.plotly_chart(fig11)
 
+#12 boxplots_details
+fig2 = px.box(df_3, y = 'total_bill' , x = 'day' , points = 'all' , color = 'smoker')
+st.plotly_chart(fig12)
 
+#13 bubble charts
+df_4 = px.data.gapminder()
+df_4
+fig13 = px.scatter(df_4.query("year == 2007"), x = 'gdpPercap' , y = 'lifeExp', size = 'pop', color = 'continent')
+st.plotly_chart(fig13)
+
+#14 Treemap
+df_5 = px.data.gapminder().query("year == 2007")
+df_5
+fig14 = px.treemap(df_5, path=[px.Constant('World'), 'continent','country'], values = 'pop' , color = 'lifeExp')
+st.plotly_chart(fig14)
