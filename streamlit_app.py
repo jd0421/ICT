@@ -86,3 +86,22 @@ df_2
 fig7 = px.pie(df_2, values = 'pop',  names = 'country' , title = 'population of European contintent')
 st.plotly_chart(fig7)
 
+#8 donut chart
+labels = ['A','B', 'C' ,'D']
+values = [300,200,100,500]
+fig8 = go.Figure(data = [go.Pie(labels = labels, values = values, hole=.3)]) # hole 도넛차트 구현
+st.plotly_chart(fig8)
+
+#9 donut chart_specific
+fig9 = go.Figure(data = [go.Pie(labels = labels, values = values, pull = [0 , 0, 0.2,0])])
+st.plotly_chart(fig9)
+
+#10 heatmaps
+
+fig10 = px.imshow([[1,23,49],[123,5,4],[45,6,3]]
+                )
+st.plotly_chart(fig10)
+
+
+
+
