@@ -38,5 +38,5 @@ import plotly.express as px
 
 data_canada = px.data.gapminder().query("country == 'Canada'")
 data_canada
-fig_1 = px.bar(data_canada, x='year' , y='pop')
-fig_1.show()
+fig1 = px.bar(data_canada, x='year' , y='pop')
+fig1.show()
