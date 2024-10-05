@@ -73,3 +73,16 @@ data_canada
 fig5 = px.line(data_canada, x = 'year', y = 'lifeExp' ,
               title = 'Life expectacy in Canada')
 st.plotly_chart(fig5)
+
+#6
+df_1 = px.data.gapminder().query("continent == 'Oceania'")
+df_1
+fig6 = px.line(df_1, x = 'year', y = 'pop' , color ='country' , symbol='country')
+st.plotly_chart(fig6)
+
+#7 piecharts
+df_2 = px.data.gapminder().query("year == 2007").query("continent == 'Europe'")
+df_2
+fig7 = px.pie(df_2, values = 'pop',  names = 'country' , title = 'population of European contintent')
+st.plotly_chart(fig7)
+
