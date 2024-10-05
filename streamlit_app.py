@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt # 시각화 라이브러리
 
 
-st.title('Streamlit for sin and cos fuctioni visualiztion')
+st.title('Streamlit for sin and cos fuction visualiztion')
 
 x_start = st.slider('x 시작값' ,  0.0, 10.0, 0.0)
 x_end = st.slider('x 시작값' ,  10.0, 20.0, 10.0)
