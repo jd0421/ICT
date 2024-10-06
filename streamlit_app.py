@@ -126,7 +126,7 @@ fig14 = px.treemap(df_5, path=[px.Constant('World'), 'continent','country'], val
 st.plotly_chart(fig14)
 
 # Plotly시각화 상.ipynb
-#fig_15_barchart
+#fig15_barchart
 #-width = 가로 크기 조절
 #-height = 세로 크기 조절
 
@@ -137,4 +137,21 @@ st.text("-height = 세로 크기 조절")
 
 fig15 = px.bar(x=["a", "b", "c"], y=[1, 3, 2], width = 600, height = 400)
 st.plotly_chart(fig15)
+
+#fig16_margin
+st.text("fig16_margin")
+
+fig16 = px.bar(x=["a", "b", "c"], y=[1, 3, 2])
+fig16.update_layout(
+    width = 600,
+    height = 400,
+    margin_l =50, #
+    margin_r =50, #
+    margin_t =100, #
+    margin_b =100 #
+)
+
+st.plotly_chart(fig16)
+
+
 
