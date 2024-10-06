@@ -528,10 +528,9 @@ fig.show()
 
 """)
 
-df_9 = px.data.iris() #붓꽃
-df_9
-fig39 = px.scatter(df_9, x = 'sepal_width' , y = 'sepal_length' , facet_col = 'species' )
+fig39 = px.scatter(df_7, x = 'sepal_width' , y = 'sepal_length' , facet_col = 'species',color = 'species' )
 st.plotly_chart(fig39)
+
 
 
 #fig40 usde df_9
