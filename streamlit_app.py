@@ -125,11 +125,14 @@ df_5
 fig14 = px.treemap(df_5, path=[px.Constant('World'), 'continent','country'], values = 'pop' , color = 'lifeExp')
 st.plotly_chart(fig14)
 
-
-#Plotly시각화 상.ipynb
+# Plotly시각화 상.ipynb
 #fig_15_barchart
 #-width = 가로 크기 조절
 #-height = 세로 크기 조절
+
+st.title("Plotly시각화 상.ipynb")
+st.text("fig_15_barchart")
+
 fig15 = px.bar(x=["a", "b", "c"], y=[1, 3, 2], width = 600, height = 400)
 st.plotly_chart(fig15)
 
