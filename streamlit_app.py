@@ -250,13 +250,13 @@ fig23_scatter_colored_with_unit
 """)
 
 
-fig23 = px.scatter(df_6, x = 'total_bill', y = 'tip', color = 'sex',
-                 labels = dict(total_bill ='total_bill($)' ,tip = 'tip($)' ) )
+#fig23 = px.scatter(df_6, x = 'total_bill', y = 'tip', color = 'sex',
+#                 labels = dict(total_bill ='total_bill($)' ,tip = 'tip($)' ) )
 #축레이블 설정  labels = dict(total_bill ='total_bill($)' ,tip = 'tip($)'
 
 #fig23.updata_xaxes(title_text = 'total_bill($)')
 #fig23.updata_yaxes(title_text = 'tip($)')
-st.plotly_chart(fig23)
+#st.plotly_chart(fig23)
 
 
 #fig24_
