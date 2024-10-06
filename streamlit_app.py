@@ -367,5 +367,6 @@ fig.show()
 ```
 """)
 fig30 = px.scatter(df_7, x = 'sepal_width' , y = 'sepal_length' , facet_col = 'species' )
+fig30.update_yaxes(ticks='outside')
 st.plotly_chart(fig30)
 
