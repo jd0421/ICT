@@ -170,3 +170,13 @@ import plotly.graph_objects as go
 fig18 = go.Figure(go.Bar(x=['A','B','C'], y = [1,3,2]))
 st.plotly_chart(fig18)
 
+#fig19
+st.markdown("""
+#Font 스타일 지정 (색, 서체, 크기)
+
+---
+""")
+
+fig19 = px.bar(x=["a", "b", "c"], y=[1, 3, 2], title = 'Bar Chart') #title =
+st.plotly_chart(fig19)
+
