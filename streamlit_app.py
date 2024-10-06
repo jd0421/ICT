@@ -356,4 +356,16 @@ fig29.update_yaxes(range = [0,10])
 fig29.update_yaxes(autorange='reversed')
 st.plotly_chart(fig29)
 
+#fig30
+st.markdown("""
+---
+### fig30  눈금 , tick 레이블 표시 설정
+
+```
+fig = px.scatter(df, x = 'sepal_width' , y = 'sepal_length' , facet_col = 'species' )
+fig.show()
+```
+""")
+fig30 = px.scatter(df_7, x = 'sepal_width' , y = 'sepal_length' , facet_col = 'species' )
+st.plotly_chart(fig30)
 
