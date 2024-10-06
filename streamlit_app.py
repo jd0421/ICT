@@ -313,7 +313,7 @@ st.plotly_chart(fig26)
 #fig27
 st.markdown("""
 ---
-fig27
+### fig27
 ### facet_col
 - 데이터가 좀 더 해석력을 가질 수 있게 해 주는 코드 중에 하나
 
@@ -321,8 +321,24 @@ fig27
 fig = px.scatter(df, x = 'sepal_width' , y = 'sepal_length' , facet_col = 'species' )
 fig.show()
 ```
-
 """)
+
 fig27 = px.scatter(df_7, x = 'sepal_width' , y = 'sepal_length' , facet_col = 'species' )
 st.plotly_chart(fig27)
+
+#fig28
+st.markdown("""
+---
+### fig28
+### facet_col
+
+```
+fig.update_xaxes(range = [0,10])
+fig.update_yaxes(range = [0,10])
+```
+""")
+fig28 = px.scatter(df_7, x = 'sepal_width' , y = 'sepal_length' , facet_col = 'species' )
+fig28.update_xaxes(range = [0,10])
+fig28.update_yaxes(range = [0,10])
+st.plotly_chart(fig28)
 
