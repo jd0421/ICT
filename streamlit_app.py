@@ -261,10 +261,11 @@ fig23_scatter_colored_with_unit
 
 #fig24_
 st.markdown("""
----
 fig24 Qiz 막대 그래프 그리기
+---
     - 주어진 데이터 x = ['A', 'B', 'C', 'D']와 y = [10, 15, 7, 12]를 사용하여 막대 그래프를 그립니다.   
     - 그래프의 가로 크기를 800픽셀, 세로 크기를 600픽셀로 설정하고, 그래프의 제목을 "카테고리별 수치"로 지정합니다.  
+---
 """)
 
 fig24 = px.bar(x = ['A', 'B', 'C', 'D'], y = [10, 15, 7, 12], title = '카테고리별 수치')
@@ -272,6 +273,7 @@ fig24.update_layout(width = 800, height = 600)
 st.plotly_chart(fig24)
 
 
+#fig25
 st.markdown("""
 ---
 fig25 
@@ -286,3 +288,24 @@ fig25.update_layout(
     height = 600
 )
 st.plotly_chart(fig25)
+
+
+#fig26
+#used df_7
+st.markdown("""
+---
+fig26 
+# 축 범위 지정하기
+
+```
+fig.update_xaxes(range = [0,10])
+fig.update_yaxes(range = [0,10])
+```
+
+""")
+
+df_7 = px.data.iris() #붓꽃
+df_7
+fig = px.scatter(df_7, x = 'sepal_width' , y = 'sepal_length' ,color = 'species' )
+st.plotly_chart(fig26)
+#전체 종 데이터의 혼합표현
