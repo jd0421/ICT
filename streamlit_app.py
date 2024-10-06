@@ -687,3 +687,58 @@ fig.add_trace(go.Scatter(x=[10,20,30], y = [40,50,60]), row = 1, col =2)
 
 fig44.add_trace(go.Scatter(x=[10,20,30], y = [40,50,60]), row = 1, col =2)
 st.plotly_chart(fig44)
+
+
+st.markdown("""
+---
+### fig45_subtitle 넣기
+```python
+fig = make_subplots(rows=1 , cols=2, subplot_titles=('Plot1', 'Plot2'))
+# subplot_titles=('Plot1', 'Plot2')
+```
+
+""")
+fig45 = make_subplots(rows=1 , cols=2, subplot_titles=('Plot1', 'Plot2'))
+st.plotly_chart(fig45)
+
+st.markdown("""
+---
+### fig46_비율 다릐게 하기 
+```python
+fig = make_subplots(rows=1 , cols=2, subplot_titles=('Plot1', 'Plot2')
+,column_widths = [0.8, 0.2])
+
+fig.add_trace(go.Scatter(x=[1,2,3], y = [4,5,6]), row = 1, col =1)
+fig.add_trace(go.Scatter(x=[10,20,30], y = [40,50,60]), row = 1, col =2)
+```
+
+""")
+
+fig46 = make_subplots(rows=1 , cols=2, subplot_titles=('Plot1', 'Plot2')
+,column_widths = [0.8, 0.2])
+
+fig46.add_trace(go.Scatter(x=[1,2,3], y = [4,5,6]), row = 1, col =1)
+fig46.add_trace(go.Scatter(x=[10,20,30], y = [40,50,60]), row = 1, col =2)
+st.plotly_chart(fig46)
+
+st.markdown("""
+---
+### fig47 이중 축 사용하기
+    사용하는 경우,
+    - 가로축을 공통 (지역 , 서울 , 대전, 대구, 부산)
+    - 세로축 두개의 선이 그어졌을때, 하나의 선이 온도, 다른 선이 습도
+
+```python
+fig = make_subplots(specs = [[{'secondary_y' : True}]])
+fig.add_trace(go.Scatter(x = [1,2,3], y = [40,50,60], name = 'yaxis1'), secondary_y = False)
+fig.add_trace(go.Scatter(x = [2,4,6], y = [4,5,6], name = 'yaxis2'), secondary_y = True)
+```
+
+""")
+
+fig47 = make_subplots(specs = [[{'secondary_y' : True}]])
+fig47.add_trace(go.Scatter(x = [1,2,3], y = [40,50,60], name = 'yaxis1'), secondary_y = False)
+fig47.add_trace(go.Scatter(x = [2,4,6], y = [4,5,6], name = 'yaxis2'), secondary_y = True)
+st.plotly_chart(fig47)
+
+
