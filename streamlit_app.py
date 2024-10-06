@@ -180,5 +180,15 @@ st.markdown("""
 """)
 
 fig19 = px.bar(x=["a", "b", "c"], y=[1, 3, 2], title = 'Bar Chart') #title =
-st.plotly_chart(fig19)
+fig19.update_layout(
+    title_y = 0.9, # 0~1 1은 맨 윗쪽
+    title_x = 0.5, # 0~1 1은 맨 오른쪽
+    title_xanchor = 'center',
+    title_yanchor = 'middle',
 
+    #폰트 스타일 추가
+    title_font_size = 50,
+    title_font_family = 'Times', #일반적인 기본글꼴 적용
+    title_font_color = 'red'
+)
+st.plotly_chart(fig19)
