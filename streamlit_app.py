@@ -262,8 +262,7 @@ fig23_scatter_colored_with_unit
 #fig24_
 st.markdown("""
 ---
-    fig24
-    Qiz 막대 그래프 그리기
+fig24 Qiz 막대 그래프 그리기
     - 주어진 데이터 x = ['A', 'B', 'C', 'D']와 y = [10, 15, 7, 12]를 사용하여 막대 그래프를 그립니다.   
     - 그래프의 가로 크기를 800픽셀, 세로 크기를 600픽셀로 설정하고, 그래프의 제목을 "카테고리별 수치"로 지정합니다.  
 """)
@@ -273,4 +272,17 @@ fig24.update_layout(width = 800, height = 600)
 st.plotly_chart(fig24)
 
 
+st.markdown("""
+---
+fig25 
+""")
 
+x = ['A', 'B', 'C', 'D']
+y = [10, 200, 7, 12]
+fig25 = go.Figure(data=go.Bar(x=x,y=y))
+fig25.update_layout(
+    title = '카테고리별 수치',
+    width = 800,
+    height = 600
+)
+st.plotly_chart(fig25)
