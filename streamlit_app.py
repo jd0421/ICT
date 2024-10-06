@@ -515,7 +515,7 @@ fig38.update_xaxes(showline=True , linewidth = 2, linecolor = 'black' ,mirror= T
 fig38.update_yaxes(showline=True , linewidth = 2, linecolor = 'red',mirror= True)
 st.plotly_chart(fig38)
 
-#fig39 usde df_9
+#fig39 used df_9
 st.markdown("""
 ---
 ### fig39 그리드 설정
@@ -531,7 +531,8 @@ fig.show()
 df_9 = px.data.iris() #붓꽃
 df_9
 fig39 = px.scatter(df_9, x = 'sepal_width' , y = 'sepal_length' , facet_col = 'species' )
-st.plotly_chart(fig39)
+fig39
+#st.plotly_chart(fig39)
 
 
 #fig40 usde df_9
