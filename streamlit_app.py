@@ -176,7 +176,7 @@ st.plotly_chart(fig18)
 #fig19
 st.markdown("""
 ---
-#Font 스타일 지정 (색, 서체, 크기)
+Font 스타일 지정 (색, 서체, 크기)
 """)
 
 fig19 = px.bar(x=["a", "b", "c"], y=[1, 3, 2], title = 'Bar Chart') #title =
@@ -192,3 +192,21 @@ fig19.update_layout(
     title_font_color = 'red'
 )
 st.plotly_chart(fig19)
+
+#fig20
+st.markdown("""
+---
+축타이틀 설정
+""")
+df_6 = px.data.tips()
+df_6
+fig = px.scatter(df_6, x = 'total_bill', y = 'tip') #축이름 설정  x = 'total_bill', y = 'tip'
+st.plotly_chart(fig20)
+
+st.markdown("""
+# 축이름 설정  x = 'total_bill', y = 'tip'
+# 산점도
+# 가로축 : 값정보(수치)
+# 세로축 : 값정보(수치)
+# 가로축과 세로축간에 어떤 관계 , 경향을 보이는지 체크가능
+""")
