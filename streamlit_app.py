@@ -161,10 +161,10 @@ fig17.update_layout( title_text = 'Bar Chart') #title_text =
 st.plotly_chart(fig17)
 
 #fig18
-st.markdown(```
+st.markdown("""
     - Express 사용법
     - Graph object 사용법
-    ```)
+    """)
 
 import plotly.graph_objects as go
 fig18 = go.Figure(go.Bar(x=['A','B','C'], y = [1,3,2]))
