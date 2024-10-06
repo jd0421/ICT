@@ -742,3 +742,81 @@ fig47.add_trace(go.Scatter(x = [2,4,6], y = [4,5,6], name = 'yaxis2'), secondary
 st.plotly_chart(fig47)
 
 
+
+st.markdown("""
+---
+### fig48 범례의 스타일 지정
+
+
+
+```python
+fig.update_layout(
+                    legend_title_text= 타이틀명 text 입력,        
+                    legend_title_font_family = 범례 타이틀 서체,
+                    legend_title_font_color= 범례 타이틀 색,
+                    legend_title_font_size= 범례 타이틀 글자 크기,
+                    legend_font_family= 범례 서체,
+                    legend_font_size=범례 글자 크기,
+                    legend_font_color=범례 색,
+                    legend_bgcolor= 범례 배경색,
+                    legend_bordercolor=범례 테두리 색,
+                    legend_borderwidth=범례 테두리 두깨
+                )
+
+
+df = px.data.tips()
+fig = px.scatter(df, x = 'total_bill', y = 'tip', color = 'sex')
+fig.show()
+```
+
+
+""")
+
+df_10 = px.data.tips()
+df
+fig48 = px.scatter(df, x = 'total_bill', y = 'tip', color = 'sex')
+st.plotly_chart(fig48)
+
+st.markdown("""
+---
+### fig48 레전드 위치 변경
+```python
+
+fig.update_layout(legend_yanchor = 'top',
+                  legend_y = 0.99,
+                  legend_xanchor='left',
+                  legend_x = 0.01)
+#왼쪽으로 레전드를 이동
+#레전드 위치 조절가능
+```
+""")
+
+fig48.update_layout(legend_yanchor = 'top',
+                  legend_y = 0.99,
+                  legend_xanchor='left',
+                  legend_x = 0.01)
+st.plotly_chart(fig48)
+
+st.markdown("""
+---
+### fig48 레전드 위치 변경_2
+```python
+
+fig.update_layout(legend_yanchor = 'top',
+                  legend_y = 0.99,
+                  legend_xanchor='left',
+                  legend_x = 0.01,
+                  legend_orientation='h',
+                  legend_entrywidth=70)
+#legend_orientation='h',
+#legend_entrywidth=70
+```
+""")
+
+fig48.update_layout(legend_yanchor = 'top',
+                  legend_y = 0.99,
+                  legend_xanchor='left',
+                  legend_x = 0.01,
+                  legend_orientation='h',
+                  legend_entrywidth=70)
+st.plotly_chart(fig48)
