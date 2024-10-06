@@ -528,12 +528,6 @@ fig.show()
 
 """)
 
-df_7 = px.data.iris() #붓꽃
-df_7
-fig26 = px.scatter(df_7, x = 'sepal_width' , y = 'sepal_length' ,color = 'species' )
-st.plotly_chart(fig26)
-#전체 종 데이터의 혼합표현
-
 df_9 = px.data.iris() #붓꽃
 df_9
 fig39 = px.scatter(df_9, x = 'sepal_width' , y = 'sepal_length' , facet_col = 'species' )
