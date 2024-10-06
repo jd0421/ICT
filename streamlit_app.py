@@ -602,4 +602,29 @@ fig43.add_trace(go.Scatter(x = [0,1,2,3,4], y = [0,1,4,9,16]))
 fig43 = go.Figure()
 st.plotly_chart(fig43)
 
+st.markdown("""
+---
+### fig44 random_x
 
+```python
+import numpy as np
+N = 100
+
+random_x = np.linspace(0,1,N)
+random_x
+random_y0 = np.random.randn(N) + 5
+random_y1 = np.random.randn(N)
+random_y2 = np.random.randn(N) - 5
+
+```
+
+""")
+
+N = 100
+random_x = np.linspace(0,1,N)
+random_x
+random_y0 = np.random.randn(N) + 5
+random_y1 = np.random.randn(N)
+random_y2 = np.random.randn(N) - 5
+
+fig44.add_trace(go.Scatter(x = random_x, y = random_y0, mode = 'lines', name = 'lines'))
