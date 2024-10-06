@@ -363,10 +363,46 @@ st.markdown("""
 
 ```
 fig = px.scatter(df, x = 'sepal_width' , y = 'sepal_length' , facet_col = 'species' )
+fig.update_yaxes(ticks='outside')
 fig.show()
 ```
 """)
 fig30 = px.scatter(df_7, x = 'sepal_width' , y = 'sepal_length' , facet_col = 'species' )
 fig30.update_yaxes(ticks='outside')
 st.plotly_chart(fig30)
+
+#fig31
+st.markdown("""
+---
+### fig31  눈금 , tick 레이블 표시 설정
+
+```
+fig = px.scatter(df, x = 'sepal_width' , y = 'sepal_length' , facet_col = 'species' )
+fig.update_yaxes(ticks='inside')
+fig.show()
+```
+""")
+fig31 = px.scatter(df_7, x = 'sepal_width' , y = 'sepal_length' , facet_col = 'species' )
+fig31.update_yaxes(ticks='outside')
+st.plotly_chart(fig31)
+
+#fig32
+
+
+st.markdown("""
+---
+### fig32  눈금 , tick 레이블 표시 설정
+
+```
+fig = px.scatter(df, x = 'sepal_width' , y = 'sepal_length' , facet_col = 'species' )
+fig.update_yaxes(ticks='inside' , col = 3)# col = 1,2,3 표현한고 싶은 컬럼에 설정
+fig.show()
+```
+""")
+fig32 = px.scatter(df_7, x = 'sepal_width' , y = 'sepal_length' , facet_col = 'species' )
+fig32.update_yaxes(ticks='inside' , col = 3)# col = 1,2,3 표현한고 싶은 컬럼에 설정
+st.plotly_chart(fig32)
+
+
+
 
