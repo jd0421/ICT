@@ -515,7 +515,7 @@ fig38.update_xaxes(showline=True , linewidth = 2, linecolor = 'black' ,mirror= T
 fig38.update_yaxes(showline=True , linewidth = 2, linecolor = 'red',mirror= True)
 st.plotly_chart(fig38)
 
-#fig39 used df_9
+#fig39 used df_7
 st.markdown("""
 ---
 ### fig39 그리드 설정
@@ -533,7 +533,7 @@ st.plotly_chart(fig39)
 
 
 
-#fig40 usde df_9
+#fig40 usde df_7 = df_9
 
 st.markdown("""
 ---
@@ -553,3 +553,53 @@ fig40 = px.scatter(df_9, x = 'sepal_width' , y = 'sepal_length' , facet_col = 's
 fig40.update_xaxes(showgrid=True, griddash = 'dash' ,gridcolor = 'burlywood',minor_showgrid = True, minor_gridcolor='gray', minor_griddash = 'dot')
 fig40.update_yaxes(showgrid=True, griddash = 'dash' ,gridcolor = 'burlywood', minor_showgrid = True, minor_gridcolor='gray' , minor_griddash = 'dot')
 st.plotly_chart(fig40)
+
+
+#fig41 
+st.markdown("""
+---
+### fig41 하나의 화면에 여러 그래프를 표현하기
+
+```python
+fig = px.scatter(x = [0,1,2,3,4], y = [0,1,4,9,16])
+fig.show()
+```
+
+""")
+fig41 = px.scatter(x = [0,1,2,3,4], y = [0,1,4,9,16])
+st.plotly_chart(fig41)
+
+
+
+st.markdown("""
+---
+### fig42 Trace 추가
+
+```python
+import plotly.graph_objects as go
+fig.add_trace(go.Scatter(x = [0,1,2,3,4], y = [0,1,4,9,16]))
+```
+
+""")
+import plotly.graph_objects as go
+fig42 = px.scatter(x = [0,1,2,3,4], y = [0,1,4,9,16])
+fig42.add_trace(go.Scatter(x = [0,1,2,3,4], y = [0,1,4,9,16]))
+st.plotly_chart(fig42)
+
+
+st.markdown("""
+---
+### fig43 
+
+```python
+fig = go.Figure()
+```
+
+""")
+
+fig43 = px.scatter(x = [0,1,2,3,4], y = [0,1,4,9,16])
+fig43.add_trace(go.Scatter(x = [0,1,2,3,4], y = [0,1,4,9,16]))
+fig43 = go.Figure()
+st.plotly_chart(fig43)
+
+
