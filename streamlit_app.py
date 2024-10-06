@@ -329,8 +329,7 @@ st.plotly_chart(fig27)
 #fig28
 st.markdown("""
 ---
-### fig28
-### facet_col
+### fig28 facet_col
 
 ```
 fig.update_xaxes(range = [0,10])
@@ -341,4 +340,20 @@ fig28 = px.scatter(df_7, x = 'sepal_width' , y = 'sepal_length' , facet_col = 's
 fig28.update_xaxes(range = [0,10])
 fig28.update_yaxes(range = [0,10])
 st.plotly_chart(fig28)
+
+#fig29
+st.markdown("""
+---
+### fig29 그래프 축 역으로 설정
+
+```
+fig.update_yaxes(autorange='reversed')
+```
+""")
+fig29 = px.scatter(df_7, x = 'sepal_width' , y = 'sepal_length' , facet_col = 'species' )
+fig29.update_xaxes(range = [0,10])
+fig29.update_yaxes(range = [0,10])
+fig29.update_yaxes(autorange='reversed')
+st.plotly_chart(fig29)
+
 
