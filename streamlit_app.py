@@ -650,3 +650,39 @@ fig.add_trace(go.Scatter(x = random_x, y = random_y2, mode = 'markers', name = '
 
 fig43.add_trace(go.Scatter(x = random_x, y = random_y2, mode = 'markers', name = 'markers'))
 st.plotly_chart(fig43)
+
+st.markdown("""
+---
+### fig44_여러개의 그래프를 레이아웃을 나눠서 그리기
+
+```python
+from plotly.subplots import make_subplots
+fig = make_subplots(rows=1 , cols=2)
+```
+
+""")
+
+from plotly.subplots import make_subplots
+fig44 = make_subplots(rows=1 , cols=2)
+st.plotly_chart(fig44)
+
+st.markdown("""
+---
+```python
+fig.add_trace(go.Scatter(x=[1,2,3], y = [4,5,6]), row = 1, col =1)
+```
+
+""")
+
+fig44.add_trace(go.Scatter(x=[1,2,3], y = [4,5,6]), row = 1, col =1)
+st.plotly_chart(fig44)
+
+st.markdown("""
+---
+```python
+fig.add_trace(go.Scatter(x=[10,20,30], y = [40,50,60]), row = 1, col =2)
+```
+
+""")
+
+fig44.add_trace(go.Scatter(x=[10,20,30], y = [40,50,60]), row = 1, col =2)
