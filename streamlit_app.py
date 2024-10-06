@@ -153,5 +153,10 @@ fig16.update_layout(
 
 st.plotly_chart(fig16)
 
+#fig17_title_in_chart
+st.text("fig17_margin")
 
+fig17 = px.bar(x=["a", "b", "c"], y=[1, 3, 2])
+fig17.update_layout( title_text = 'Bar Chart') #title_text =
+st.plotly_chart(fig17)
 
