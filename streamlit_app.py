@@ -686,3 +686,4 @@ fig.add_trace(go.Scatter(x=[10,20,30], y = [40,50,60]), row = 1, col =2)
 """)
 
 fig44.add_trace(go.Scatter(x=[10,20,30], y = [40,50,60]), row = 1, col =2)
+st.plotly_chart(fig44)
