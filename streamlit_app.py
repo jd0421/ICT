@@ -387,8 +387,6 @@ fig31.update_yaxes(ticks='inside')
 st.plotly_chart(fig31)
 
 #fig32
-
-
 st.markdown("""
 ---
 ### fig32  눈금 , tick 레이블 표시 설정
@@ -403,6 +401,36 @@ fig32 = px.scatter(df_7, x = 'sepal_width' , y = 'sepal_length' , facet_col = 's
 fig32.update_yaxes(ticks='inside' , col = 3)# col = 1,2,3 표현한고 싶은 컬럼에 설정
 st.plotly_chart(fig32)
 
+#fig33
+st.markdown("""
+---
+### fig33  눈금 , tick 레이블 표시 설정
+
+```
+fig = px.scatter(df, x = 'sepal_width' , y = 'sepal_length' , facet_col = 'species' )
+fig.update_yaxes(ticks='inside' , col = 1, dtick=0.2) #dtick=0.2 축 간격설정가능
+fig.show()
+```
+""")
+fig33 = px.scatter(df_7, x = 'sepal_width' , y = 'sepal_length' , facet_col = 'species' )
+fig33.update_yaxes(ticks='inside' , col = 1, dtick=0.2) #dtick=0.2 축 간격설정가능
+st.plotly_chart(fig33)
 
 
+#fig34
+st.markdown("""
+---
+### fig34  눈금 , tick 레이블 표시 설정
+
+```
+fig = px.scatter(df, x = 'sepal_width' , y = 'sepal_length' , facet_col = 'species' )
+fig.update_yaxes(ticks='inside' , col = 1 )
+fig.update_yaxes(tickvals=[5.3,6.4] )  #tickvals=[5.3,6.4]
+fig.show()
+```
+""")
+fig34 = px.scatter(df_7, x = 'sepal_width' , y = 'sepal_length' , facet_col = 'species' )
+fig34.update_yaxes(ticks='inside' , col = 1) #dtick=0.2 축 간격설정가능
+fig34.update_yaxes(tickvals=[5.3,6.4] )  #tickvals=[5.3,6.4]
+st.plotly_chart(fig34)
 
