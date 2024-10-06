@@ -254,8 +254,23 @@ fig23 = px.scatter(df_6, x = 'total_bill', y = 'tip', color = 'sex',
                  labels = dict(total_bill ='total_bill($)' ,tip = 'tip($)' ) )
 #축레이블 설정  labels = dict(total_bill ='total_bill($)' ,tip = 'tip($)'
 
-fig23.updata_xaxes(title_text = 'total_bill($)')
-fig23.updata_yaxes(title_text = 'tip($)')
+#fig23.updata_xaxes(title_text = 'total_bill($)')
+#fig23.updata_yaxes(title_text = 'tip($)')
 st.plotly_chart(fig23)
+
+
+#fig24_
+st.markdown("""
+---
+    fig24
+    Qiz 막대 그래프 그리기
+    - 주어진 데이터 x = ['A', 'B', 'C', 'D']와 y = [10, 15, 7, 12]를 사용하여 막대 그래프를 그립니다.   
+    - 그래프의 가로 크기를 800픽셀, 세로 크기를 600픽셀로 설정하고, 그래프의 제목을 "카테고리별 수치"로 지정합니다.  
+""")
+
+fig24 = px.bar(x = ['A', 'B', 'C', 'D'], y = [10, 15, 7, 12], title = '카테고리별 수치')
+fig24.update_layout(width = 800, height = 600)
+st.plotly_chart(fig24)
+
 
 
