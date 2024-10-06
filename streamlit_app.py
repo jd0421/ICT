@@ -212,11 +212,13 @@ st.markdown("""
 """)
 
 #fig21_scatter_colored
+# used df_6
+
 st.markdown("""
 ---
-##fig21_scatter_colored
+fig21_scatter_colored
 """)
-fig21 = px.scatter(df, x = 'total_bill', y = 'tip', color = 'sex') #축 설정  x = 'total_bill', y = 'tip'
+fig21 = px.scatter(df_6, x = 'total_bill', y = 'tip', color = 'sex') #축 설정  x = 'total_bill', y = 'tip'
 st.plotly_chart(fig21)
 st.markdown("""
 ---
