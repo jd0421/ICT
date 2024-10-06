@@ -224,3 +224,22 @@ st.markdown("""
 ---
     - 축 설정  x = 'total_bill', y = 'tip'
 """)
+
+
+#fig22_scatter_colored_with_unit
+# used df_6
+st.markdown("""
+---
+fig22_scatter_colored_with_unit
+""")
+
+fig22 = px.scatter(df_6, x = 'total_bill', y = 'tip', color = 'sex',
+                 labels = dict(total_bill ='total_bill($)' ,tip = 'tip($)' ) )
+#축레이블 설정  labels = dict(total_bill ='total_bill($)' ,tip = 'tip($)'
+st.plotly_chart(fig22)
+st.markdown("""
+---
+    - 축레이블 설정  labels = dict(total_bill ='total_bill($)' ,tip = 'tip($)'
+""")
+
+
