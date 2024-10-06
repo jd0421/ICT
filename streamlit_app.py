@@ -597,8 +597,6 @@ fig = go.Figure()
 
 """)
 
-fig43 = px.scatter(x = [0,1,2,3,4], y = [0,1,4,9,16])
-fig43.add_trace(go.Scatter(x = [0,1,2,3,4], y = [0,1,4,9,16]))
 fig43 = go.Figure()
 st.plotly_chart(fig43)
 
@@ -627,4 +625,4 @@ random_y0 = np.random.randn(N) + 5
 random_y1 = np.random.randn(N)
 random_y2 = np.random.randn(N) - 5
 
-fig44.add_trace(go.Scatter(x = random_x, y = random_y0, mode = 'lines', name = 'lines'))
+fig43.add_trace(go.Scatter(x = random_x, y = random_y0, mode = 'lines', name = 'lines'))
