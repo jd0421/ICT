@@ -154,14 +154,17 @@ fig16.update_layout(
 st.plotly_chart(fig16)
 
 #fig17_title_in_chart
-st.text("fig17_margin")
-
+st.markdown("""
+    ---
+    fig17_title_in_chart
+    """)
 fig17 = px.bar(x=["a", "b", "c"], y=[1, 3, 2])
 fig17.update_layout( title_text = 'Bar Chart') #title_text =
 st.plotly_chart(fig17)
 
 #fig18
 st.markdown("""
+    ---
     - Express 사용법
     - Graph object 사용법
     """)
@@ -172,9 +175,8 @@ st.plotly_chart(fig18)
 
 #fig19
 st.markdown("""
-#Font 스타일 지정 (색, 서체, 크기)
-
 ---
+#Font 스타일 지정 (색, 서체, 크기)
 """)
 
 fig19 = px.bar(x=["a", "b", "c"], y=[1, 3, 2], title = 'Bar Chart') #title =
