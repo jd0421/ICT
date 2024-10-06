@@ -210,3 +210,15 @@ st.markdown("""
     - 세로축 : 값정보(수치)
     - 가로축과 세로축간에 어떤 관계 , 경향을 보이는지 체크가능
 """)
+
+#fig21_scatter_colored
+st.markdown("""
+---
+##fig21_scatter_colored
+""")
+fig21 = px.scatter(df, x = 'total_bill', y = 'tip', color = 'sex') #축 설정  x = 'total_bill', y = 'tip'
+st.plotly_chart(fig21)
+st.markdown("""
+---
+    - 축 설정  x = 'total_bill', y = 'tip'
+""")
