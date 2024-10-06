@@ -626,3 +626,4 @@ random_y1 = np.random.randn(N)
 random_y2 = np.random.randn(N) - 5
 
 fig43.add_trace(go.Scatter(x = random_x, y = random_y0, mode = 'lines', name = 'lines'))
+st.plotly_chart(fig43)
