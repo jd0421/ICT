@@ -773,8 +773,8 @@ fig.show()
 """)
 
 df_10 = px.data.tips()
-df
-fig48 = px.scatter(df, x = 'total_bill', y = 'tip', color = 'sex')
+df_10
+fig48 = px.scatter(df_10, x = 'total_bill', y = 'tip', color = 'sex')
 st.plotly_chart(fig48)
 
 st.markdown("""
