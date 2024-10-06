@@ -434,3 +434,52 @@ fig34.update_yaxes(ticks='inside' , col = 1) #dtick=0.2 축 간격설정가능
 fig34.update_yaxes(tickvals=[5.3,6.4] )  #tickvals=[5.3,6.4]
 st.plotly_chart(fig34)
 
+#fig35
+st.markdown("""
+---
+### fig35  눈금 , tick 레이블 표시 설정
+
+```
+fig = px.scatter(df, x = 'sepal_width' , y = 'sepal_length' , facet_col = 'species' )
+fig.update_yaxes(ticks='outside' , tickwidth = 2, tickcolor = 'crimson'  )
+fig.show()
+```
+- minor_tickcolor
+```
+fig.update_yaxes(minor_ticks='outside' , minor_tickcolor = 'black')
+fig.update_xaxes(minor_ticks='outside' , minor_tickcolor = 'black')
+```
+
+""")
+
+fig35 = px.scatter(df_7, x = 'sepal_width' , y = 'sepal_length' , facet_col = 'species' )
+fig35.update_yaxes(ticks='outside' , tickwidth = 2, tickcolor = 'crimson'  )
+fig35.update_yaxes(minor_ticks='outside' , minor_tickcolor = 'black')
+fig35.update_xaxes(minor_ticks='outside' , minor_tickcolor = 'black')
+st.plotly_chart(fig35)
+
+
+
+#fig36
+#used df_8
+st.markdown("""
+---
+### fig36 축스타일 지정
+
+```python
+fig.update_xaxes(showline=True , linewidth = 2, linecolor = 'black' , col = 1) # col = 1 컬럼지정 가능
+fig.update_yaxes(showline=True , linewidth = 2, linecolor = 'red')
+```
+
+""")
+
+df_8 = px.data.tips()
+fig36 = px.histogram(df_8, x = 'sex', y ='tip', histfunc  = 'sum', facet_col = 'smoker')
+st.plotly_chart(fig36)
+
+
+
+
+
+
+
