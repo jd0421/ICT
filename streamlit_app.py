@@ -602,7 +602,7 @@ st.plotly_chart(fig43)
 
 st.markdown("""
 ---
-### fig44 random_x
+### fig43_random_x
 
 ```python
 import numpy as np
@@ -613,7 +613,7 @@ random_x
 random_y0 = np.random.randn(N) + 5
 random_y1 = np.random.randn(N)
 random_y2 = np.random.randn(N) - 5
-
+fig.add_trace(go.Scatter(x = random_x, y = random_y0, mode = 'lines', name = 'lines'))
 ```
 
 """)
@@ -626,4 +626,27 @@ random_y1 = np.random.randn(N)
 random_y2 = np.random.randn(N) - 5
 
 fig43.add_trace(go.Scatter(x = random_x, y = random_y0, mode = 'lines', name = 'lines'))
+st.plotly_chart(fig43)
+
+
+st.markdown("""
+---
+```python
+fig.add_trace(go.Scatter(x = random_x, y = random_y1, mode = 'lines+markers', name = 'lines+markers'))
+```
+
+""")
+
+fig43.add_trace(go.Scatter(x = random_x, y = random_y1, mode = 'lines+markers', name = 'lines+markers'))
+st.plotly_chart(fig43)
+
+st.markdown("""
+---
+```python
+fig.add_trace(go.Scatter(x = random_x, y = random_y2, mode = 'markers', name = 'markers'))
+```
+
+""")
+
+fig43.add_trace(go.Scatter(x = random_x, y = random_y2, mode = 'markers', name = 'markers'))
 st.plotly_chart(fig43)
