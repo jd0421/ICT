@@ -478,8 +478,77 @@ fig36 = px.histogram(df_8, x = 'sex', y ='tip', histfunc  = 'sum', facet_col = '
 st.plotly_chart(fig36)
 
 
+#fig37_used df_8
+st.markdown("""
+---
+### fig37 축스타일 지정
+
+```python
+fig = px.histogram(df, x = 'sex', y ='tip', histfunc  = 'sum', facet_col = 'smoker')
+fig.update_xaxes(showline=True , linewidth = 2, linecolor = 'black' , col = 1)
+fig.update_yaxes(showline=True , linewidth = 2, linecolor = 'red')```
+
+""")
+
+df_8 = px.data.tips()
+fig37 = px.histogram(df_8, x = 'sex', y ='tip', histfunc  = 'sum', facet_col = 'smoker')
+fig37.update_xaxes(showline=True , linewidth = 2, linecolor = 'black' , col = 1)
+fig37.update_yaxes(showline=True , linewidth = 2, linecolor = 'red')
+st.plotly_chart(fig37)
 
 
+#fig38_used df_8
+st.markdown("""
+---
+### fig38 축스타일 지정
+
+```python
+fig = px.histogram(df, x = 'sex', y ='tip', histfunc  = 'sum', facet_col = 'smoker')
+fig.update_xaxes(showline=True , linewidth = 2, linecolor = 'black' ,mirror= True)
+fig.update_yaxes(showline=True , linewidth = 2, linecolor = 'red',mirror= True)
+```
+
+""")
+df_8 = px.data.tips()
+fig38 = px.histogram(df_8, x = 'sex', y ='tip', histfunc  = 'sum', facet_col = 'smoker')
+fig38.update_xaxes(showline=True , linewidth = 2, linecolor = 'black' ,mirror= True)
+fig38.update_yaxes(showline=True , linewidth = 2, linecolor = 'red',mirror= True)
+st.plotly_chart(fig38)
+
+#fig39 usde df_9
+st.markdown("""
+---
+### fig39 그리드 설정
+
+```python
+df = px.data.iris() #붓꽃
+fig = px.scatter(df, x = 'sepal_width' , y = 'sepal_length' , facet_col = 'species' )
+fig.show()
+```
+
+""")
+df_9 = px.data.iris() #붓꽃
+fig39 = px.scatter(df_9, x = 'sepal_width' , y = 'sepal_length' , facet_col = 'species' )
+st.plotly_chart(fig39)
 
 
+#fig40 usde df_9
 
+st.markdown("""
+---
+### fig40 그리드 설정
+
+```python
+fig = px.scatter(df, x = 'sepal_width' , y = 'sepal_length' , facet_col = 'species' )
+fig.update_xaxes(showgrid=True, griddash = 'dash' ,gridcolor = 'burlywood',minor_showgrid = True, minor_gridcolor='gray', minor_griddash = 'dot')
+fig.update_yaxes(showgrid=True, griddash = 'dash' ,gridcolor = 'burlywood', minor_showgrid = True, minor_gridcolor='gray' , minor_griddash = 'dot')
+fig.show()
+```
+
+""")
+
+df_9 = px.data.iris() #붓꽃
+fig40 = px.scatter(df_9, x = 'sepal_width' , y = 'sepal_length' , facet_col = 'species' )
+fig40.update_xaxes(showgrid=True, griddash = 'dash' ,gridcolor = 'burlywood',minor_showgrid = True, minor_gridcolor='gray', minor_griddash = 'dot')
+fig40.update_yaxes(showgrid=True, griddash = 'dash' ,gridcolor = 'burlywood', minor_showgrid = True, minor_gridcolor='gray' , minor_griddash = 'dot')
+st.plotly_chart(fig40)
