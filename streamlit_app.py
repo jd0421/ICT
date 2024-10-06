@@ -200,7 +200,7 @@ st.markdown("""
 """)
 df_6 = px.data.tips()
 df_6
-fig = px.scatter(df_6, x = 'total_bill', y = 'tip') #축이름 설정  x = 'total_bill', y = 'tip'
+fig20 = px.scatter(df_6, x = 'total_bill', y = 'tip') #축이름 설정  x = 'total_bill', y = 'tip'
 st.plotly_chart(fig20)
 
 st.markdown("""
