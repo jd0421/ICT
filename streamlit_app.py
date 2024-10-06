@@ -132,6 +132,8 @@ st.plotly_chart(fig14)
 
 st.title("Plotly시각화 상.ipynb")
 st.text("fig_15_barchart")
+st.text("-width = 가로 크기 조절")
+st.text("-height = 세로 크기 조절")
 
 fig15 = px.bar(x=["a", "b", "c"], y=[1, 3, 2], width = 600, height = 400)
 st.plotly_chart(fig15)
