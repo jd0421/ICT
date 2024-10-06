@@ -773,10 +773,10 @@ fig.show()
 """)
 
 # df_3, df_8 = px.data.tips()
-#df_10 = px.data.tips()
-df_8
-fig48 = px.scatter(df_8, x = 'total_bill', y = 'tip', color = 'sex')
-st.plotly_chart(fig48)
+df_10 = px.data.tips()
+df_10
+fig49 = px.scatter(df_10, x = 'total_bill', y = 'tip', color = 'sex')
+st.plotly_chart(fig49)
 
 
 
@@ -794,11 +794,11 @@ fig.update_layout(legend_yanchor = 'top',
 ```
 """)
 
-fig48.update_layout(legend_yanchor = 'top',
+fig49.update_layout(legend_yanchor = 'top',
                   legend_y = 0.99,
                   legend_xanchor='left',
                   legend_x = 0.01)
-st.plotly_chart(fig48)
+st.plotly_chart(fig49)
 
 st.markdown("""
 ---
@@ -816,10 +816,10 @@ fig.update_layout(legend_yanchor = 'top',
 ```
 """)
 
-fig48.update_layout(legend_yanchor = 'top',
+fig49.update_layout(legend_yanchor = 'top',
                   legend_y = 0.99,
                   legend_xanchor='left',
                   legend_x = 0.01,
                   legend_orientation='h',
                   legend_entrywidth=70)
-st.plotly_chart(fig48)
+st.plotly_chart(fig49)
